@@ -79,8 +79,9 @@ var image = new Image();
     image.src = imgData;
 image.onload = function() {
     ctx.drawImage(image, 0, 0);
+          document.getElementById('btn-download-img').href = canvas.toDataURL('image/png');
+
 };
-        document.getElementById('btn-download-img').href = canvas.toDataURL('image/png');
         
 
       }
