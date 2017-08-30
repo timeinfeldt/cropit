@@ -76,10 +76,10 @@
 var ctx = canvas.getContext("2d");
 
 var image = new Image();
+    image.src = imgData;
 image.onload = function() {
     ctx.drawImage(image, 0, 0);
 };
-image.src = imgData;
         
         
         
