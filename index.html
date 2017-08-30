@@ -43,7 +43,7 @@
       <input type="file" class="cropit-image-input custom" accept="image/*">
       <div class="btn select-image-btn"><span class="icon icon-image"></span>Select new image</div>
       <div class="btn download-btn"><span class="icon icon-box-add"></span>Download cropped image</div>
-      <a href="javascript:" onClick="downloadImage()" class="btn"><span class="icon icon-box-add"></span>Download cropped image (new)</div>
+      <a id="btn-download-img" download="YourFileName.jpg" href="javascript:" onClick="downloadImage()" class="btn"><span class="icon icon-box-add"></span>Download cropped image (new)</div>
     </div>
   </div>
 </div>
@@ -80,12 +80,9 @@ var image = new Image();
 image.onload = function() {
     ctx.drawImage(image, 0, 0);
 };
+        document.getElementById('btn-download-img').href = canvas.toDataURL('image/jpeg');
         
-        
-        
-canvas.toBlob(function(blob) {
-    saveAs(blob, "pretty image.png");
-});
+
       }
     </script>
 
