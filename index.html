@@ -64,15 +64,10 @@
       
       function downloadImage() {
         
-        
-        
         var imgData = $(".splash").cropit('export');
         
-        
-        
+  
         var canvas = document.getElementById("c");
-        canvas.width = $(".splash").cropit('previewSize').width;
-        canvas.height = $(".splash").cropit('previewSize').height;
 var ctx = canvas.getContext("2d");
 
 var image = new Image();
