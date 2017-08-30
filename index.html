@@ -48,6 +48,8 @@
   </div>
 </div>
 
+    <canvas id="c"></canvas>
+    
     <script src="scripts/vendor.js"></script>
 <script src="scripts/index.js"></script>
     <script src="https://cdn.rawgit.com/eligrey/FileSaver.js/dffa3a49/FileSaver.min.js"></script>
@@ -57,30 +59,7 @@
 </script>
     
     <script>
-      function b64toBlob(b64Data, contentType, sliceSize) {
-  contentType = contentType || '';
-  sliceSize = sliceSize || 512;
-
-  var byteCharacters = atob(b64Data);
-  var byteArrays = [];
-
-  for (var offset = 0; offset < byteCharacters.length; offset += sliceSize) {
-    var slice = byteCharacters.slice(offset, offset + sliceSize);
-
-    var byteNumbers = new Array(slice.length);
-    for (var i = 0; i < slice.length; i++) {
-      byteNumbers[i] = slice.charCodeAt(i);
-    }
-
-    var byteArray = new Uint8Array(byteNumbers);
-
-    byteArrays.push(byteArray);
-  }
-
-  var blob = new Blob(byteArrays, {type: contentType});
-  return blob;
-}
-      
+     
       
       
       function downloadImage() {
@@ -91,16 +70,20 @@
         
         
         
-        var contentType = 'image/png';
+        var canvas = document.getElementById("c");
+var ctx = canvas.getContext("2d");
 
-var imgBlob = b64toBlob(imgData, contentType);
+var image = new Image();
+image.onload = function() {
+    ctx.drawImage(image, 0, 0);
+};
+image.src = imgData;
         
         
         
-        
-        var blob = new Blob([imgBlob]);
-saveAs(blob, "img.png");
-      }
+canvas.toBlob(function(blob) {
+    saveAs(blob, "pretty image.png");
+});
     </script>
 
     </body>
