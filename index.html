@@ -20,6 +20,13 @@
     <div class="github-link"><a href="https://github.com/scottcheng/cropit"><span class="icon icon-github2"></span>GitHub</a></div>
   </div>
   <div class="demo-wrapper">
+    <div class="settings-wrapper">
+    <select id="size-select">
+        <option value="360x250">Regular image</option>
+        <option value="600x300">In-feed image</option>
+        <option value="1500x500">Institution post image</option>
+    </select>
+</div>
     <div class="preview-wrapper">
       <div class="cropit-preview cropit-image-loading" style="position: relative; width: 530px; height: 260px;">
         <div class="cropit-preview-background-container" style="position: absolute; z-index: 0; top: 0px; right: 0px; bottom: 0px; left: 0px;"><img class="cropit-preview-background" alt="" style="position: relative; left: 0px; top: 0px; transform-origin: left top 0px; will-change: transform;"></div>
@@ -59,9 +66,24 @@
 </script>
     
     <script>
+      
+            function setPreviewSizeFromSettings(){
+	var val = $('#size-select').val();
+	val = val.split('x');
+	var valWidth = parseInt(val[0]);
+	var valHeight = parseInt(val[1]);
+	$('.splash').cropit('previewSize', { width: valWidth, height: valHeight });
+      }
+      
+          setPreviewSizeFromSettings();
+
+      
+      
+     $('#size-select').change(function(e){
+    setPreviewSizeFromSettings();
+});
      
-      
-      
+
       function downloadImage() {
         
         var imgData = $(".splash").cropit('export');
