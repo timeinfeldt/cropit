@@ -30,7 +30,7 @@
         onZoomEnabled: d.bind(h),
         onZoomDisabled: c.bind(h),
         onImageError: b.bind(h.find(".cropit-preview"))
-      }), h.on("click", ".rotate-cw-btn", g.bind(h)), h.on("click", ".rotate-ccw-btn", f.bind(h)), h.on("click", ".select-image-btn", e.bind(h)), h.on("click", ".download-btn", a.bind(h))
+      }), h.on("click", ".rotate-cw-btn", g.bind(h)), h.on("click", ".rotate-ccw-btn", f.bind(h)), h.on("click", ".select-image-btn", e.bind(h)), h.on("click", ".js-download-btn", a.bind(h))
     }(),
     function() {
       var e;
@@ -45,7 +45,7 @@
         onZoomEnabled: d.bind(e),
         onZoomDisabled: c.bind(e),
         onImageError: b.bind(e.find(".cropit-preview"))
-      }), e.on("click", ".download-btn", a.bind(e))
+      }), e.on("click", ".js-download-btn", a.bind(e))
     }(),
     function() {
       var h;
@@ -60,7 +60,7 @@
         onZoomEnabled: d.bind(h),
         onZoomDisabled: c.bind(h),
         onImageError: b.bind(h.find(".cropit-preview"))
-      }), h.on("click", ".rotate-cw-btn", g.bind(h)), h.on("click", ".rotate-ccw-btn", f.bind(h)), h.on("click", ".select-image-btn", e.bind(h)), h.on("click", ".download-btn", a.bind(h))
+      }), h.on("click", ".rotate-cw-btn", g.bind(h)), h.on("click", ".rotate-ccw-btn", f.bind(h)), h.on("click", ".select-image-btn", e.bind(h)), h.on("click", ".js-download-btn", a.bind(h))
     }(),
     function() {
       var h;
@@ -76,7 +76,7 @@
         onZoomEnabled: d.bind(h),
         onZoomDisabled: c.bind(h),
         onImageError: b.bind(h.find(".cropit-preview"))
-      }), h.on("click", ".rotate-cw-btn", g.bind(h)), h.on("click", ".rotate-ccw-btn", f.bind(h)), h.on("click", ".select-image-btn", e.bind(h)), h.on("click", ".download-btn", a.bind(h))
+      }), h.on("click", ".rotate-cw-btn", g.bind(h)), h.on("click", ".rotate-ccw-btn", f.bind(h)), h.on("click", ".select-image-btn", e.bind(h)), h.on("click", ".js-download-btn", a.bind(h))
     }(),
     function() {
       var h;
@@ -93,6 +93,6 @@
         onZoomEnabled: d.bind(h),
         onZoomDisabled: c.bind(h),
         onImageError: b.bind(h.find(".cropit-preview"))
-      }), h.on("click", ".rotate-cw-btn", g.bind(h)), h.on("click", ".rotate-ccw-btn", f.bind(h)), h.on("click", ".select-image-btn", e.bind(h)), h.on("click", ".download-btn", a.bind(h))
+      }), h.on("click", ".rotate-cw-btn", g.bind(h)), h.on("click", ".rotate-ccw-btn", f.bind(h)), h.on("click", ".select-image-btn", e.bind(h)), h.on("click", ".js-download-btn", a.bind(h))
     }()
 }).call(this);
