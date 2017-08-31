@@ -109,6 +109,27 @@ image.onload = function() {
         
 
       }
+	    
+	    function updateImageFromUrl() {
+		    var newUrl = $('#input-url').val();
+		    var currentUrl = $('.splash').cropit('imageSrc');
+		    
+		    if (newUrl != currentUrl) {
+			$('.splash').cropit('imageSrc', newUrl);
+		    }
+	    }
+	    
+	    
+	    $('#input-url').change(function(e){
+updateImageFromUrl();
+
+})
+$('#input-url').keyup(function(e){
+updateImageFromUrl();
+})
+$('#input-url').blur(function(e){
+updateImageFromUrl();
+})
     </script>
 
     </body>
