@@ -16,8 +16,6 @@
     <div class="splash">
   <div class="title-wrapper">
     <h1 class="title">cropit</h1>
-    <div class="tagline">a "customizable crop and zoom" jQuery plugin</div>
-    <div class="github-link"><a href="https://github.com/scottcheng/cropit"><span class="icon icon-github2"></span>GitHub</a></div>
   </div>
 	    <div class="settings-wrapper" style="
     text-align: center;
@@ -51,7 +49,7 @@
     <div class="btns">
       <input type="file" class="cropit-image-input custom" accept="image/*">
       <div class="btn select-image-btn"><span class="icon icon-image"></span>Select new image</div>
-      <div class="btn download-btn"><span class="icon icon-box-add"></span>Download cropped image</div>
+      <div class="btn download-btn" onClick="downloadImage()"><span class="icon icon-box-add"></span>Download cropped image</div>
       <a href="javascript:" onClick="downloadImage()" class="btn"><span class="icon icon-box-add"></span>Download cropped image (new)</a>
     </div>
   </div>
@@ -86,8 +84,8 @@
 });
      
 
-      function downloadImage() {
-        
+      function downloadImage(e) {
+        e.preventDefault();
         var imgData = $(".splash").cropit('export');
         
   
